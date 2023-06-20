@@ -6,6 +6,7 @@ import {FetchAllCars} from "@/utils";
 import {isContainer} from "postcss-selector-parser";
 import CarCard from "@/components/CarCard";
 import {yearsOfProduction , fuels} from "@/constants";
+import ShowMore from "@/components/ShowMore";
 
 
 
@@ -57,6 +58,9 @@ export default async function Home({searchParams}) {
                         <CarCard key={index} car={car} />
                     ))}
                 </div>
+
+                    <ShowMore pageNumber={(searchParams.limit || 10)/10}
+                    isNext={(searchParams.limit ||10)> allCars.length}/>
                 </section>
             ):(
 
