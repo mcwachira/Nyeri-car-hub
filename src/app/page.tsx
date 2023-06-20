@@ -10,6 +10,7 @@ import ShowMore from "@/components/ShowMore";
 
 
 
+
 export default async function Home({searchParams}) {
 
     const allCars =   await FetchAllCars({
