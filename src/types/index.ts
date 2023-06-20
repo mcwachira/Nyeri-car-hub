@@ -11,10 +11,7 @@ export type CustomButtonProps ={
 
 }
 
-export type CustomFilterProps ={
-    title?:string,
 
-}
 
 export type SearchManufacturerProps ={
     manufacturer:string,
@@ -35,4 +32,23 @@ export type CarProps = {
     model:string,
     transmission:string,
     year:number
+}
+
+export type FilterProps  = {
+    manufacturer?: string;
+    year?: number;
+    model?: string;
+    limit?: number;
+    fuel?: string;
+}
+
+
+export type OptionProps  = {
+title:string;
+value:string;
+}
+
+export type CustomFilterProps = {
+    title:string;
+    options:OptionProps[]
 }
