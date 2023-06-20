@@ -7,11 +7,12 @@ import {isContainer} from "postcss-selector-parser";
 import CarCard from "@/components/CarCard";
 import {yearsOfProduction , fuels} from "@/constants";
 import ShowMore from "@/components/ShowMore";
+import {HomeProps} from "@/types";
 
 
 
 
-export default async function Home({searchParams}) {
+export default async function Home({searchParams}:HomeProps) {
 
     const allCars =   await FetchAllCars({
 

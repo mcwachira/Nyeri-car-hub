@@ -42,7 +42,9 @@ export type FilterProps  = {
     fuel?: string;
 }
 
-
+export type HomeProps = {
+    searchParams:FilterProps
+}
 export type OptionProps  = {
 title:string;
 value:string;
